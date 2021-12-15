@@ -1,2 +1,2 @@
-# meus progetos em python
- Este repositório serve para eu gardar meu progetos em python
+# Progetos.py
+ Este repositório serve para eu gardar meus progetos em python
