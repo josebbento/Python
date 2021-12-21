@@ -1,9 +1,19 @@
-print('==========| maquina de somar |==========')
-print('')
-print('(use ponto no lugar da virgula)')
-print('\n\n')
-n1=float (input('insira um número: '))
-n2=float (input('insira um número: '))
-print('a soma de',n1,'e',n2,'é',n1+n2)
-r=n1+n2
-print('a soma de {} e {} é {}'.format(n1,n2,r))
+print('''==========| maquina de somar |==========)
+
+(use ponto no lugar da virgula)')
+
+''')
+
+n1 = float (input('insira um número: '))
+n2 = float (input('insira um número: '))
+
+n4 = n1 + n2
+
+maisum = input('deseja inserir mais um número (s/n)? ').lower()[0]
+
+while maisum == 's':
+    n3 = float (input ('insira um número: '))
+    n4 += n3
+    maisum = input('deseja inserir mais um número (s/n)? ').lower()[0]
+
+print ('Resultado:',n4)
