@@ -1,6 +1,17 @@
-n=int(input('insira um número: '))
+
+novamente = 's'
+contador = 0
 a=13
+
+n=int(input('insira um número: '))
+
 print('-'*a)
-for x in range (0,11):
-    print('{} * {} = {}'.format(n,x,n*x))
+print('{} * 0 = 0'.format(n))
+print('-'*a)
+
+while novamente == 's':
+    contador = contador + 1
+    print('{} * {} = {}'.format(n,contador,n*contador))
     print('-'*a)
+    if contador % 10 == 0:
+        novamente = input('deseja ver mais dez números? ').lower().strip()[0]        
