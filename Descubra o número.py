@@ -1,18 +1,29 @@
-print('=-='*16)
-print('|               TENTE ACERTAR      1.0         |')
-print('=-='*16)
-print('|-Tente acertar o número que a CPU pensa       |')
-print('|-Os números possiveis: 0, 1, 2, 3, 4, 5       |')
-print('=-='*16)
-print()
-import random
-n = float (input('insira um número: '))
-gerador = random.randint(0,5)
-print('número pensado:',gerador)
-print()
-print('=-='*16)
-if gerador == n:
-  print('|                 Você ganhou                  |')
-else:
-  print('|                C.P.U. ganhou                 |')
-print('=-='*16)
+from random import randint
+continuar = 's'
+
+while continuar == 's':
+   print('''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+| ADIVINHANDO O NÚMERO V 2.0  |
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Tente acertar o número pensado pelo pc
+
+''')
+
+  chutes = 1
+
+  j2 = str(randint(0,10))
+
+  j1 = input ('insira um chute entre 0 e 10: ')
+
+  while j1 != j2:
+    if j1 < j2:
+      j1 = input ('é maior que {}, tente de novo: '.format(j1))
+    else:
+      j1 = input ('é menor que {}, tente de novo: '.format(j1))
+    chutes += 1
+  
+  print('Você acertou. Parabéns\nVocê precisou de {} tentativas'.format(chutes))
+  continuar = input ('deseja jogar de novo? ').lower().strip()[0]
+  if continuar == 's':
+    print('\n---------------------------------\n')
