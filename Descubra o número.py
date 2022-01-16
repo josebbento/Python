@@ -10,10 +10,9 @@ n = float (input('insira um número: '))
 gerador = random.randint(0,5)
 print('número pensado:',gerador)
 print()
+print('=-='*16)
 if gerador == n:
-  print('=-='*16)
   print('|                 Você ganhou                  |')
-  print('=-='*16)
 else:
-  print('=-='*16)
   print('|                C.P.U. ganhou                 |')
+print('=-='*16)
