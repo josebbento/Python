@@ -13,9 +13,9 @@ while f != 'n' and f != 'nao' and f != 'não':
     if c == 1 or menor > n:
         menor = n
 
-    while f != 'n' and f != 'nao' and f != 'não' and f != 's' and f != 'sim':
-        f = input('diseja continuar: ').lower()
-        if f != 'n' and f != 'nao' and f != 'não' and f != 's' and f != 'sim':
+    while f != 'n' and f != 's':
+        f = input('diseja continuar: ').lower().strip()[0]
+        if f != 'n' and f != 's':
             print('comando não entendido', end=', ')
 
 m = s/c
